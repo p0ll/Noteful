@@ -1,5 +1,10 @@
 class NotesController < ApplicationController
   before_action :authenticate_user!
+    
+  def preview
+     "#{self} ... read more"
+  end
+
   def new
     @note = Note.new
   end
